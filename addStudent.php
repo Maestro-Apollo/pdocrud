@@ -1,5 +1,15 @@
-<?php include 'header.php'; ?>
+<?php
+include 'header.php';
+include 'classes/User.php';
+?>
+<?php
 
+$user = new User;
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
+  $userReg = $user->userRegistration($_POST);
+}
+
+ ?>
 
 
 <section class="container">
